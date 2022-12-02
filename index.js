@@ -4,9 +4,9 @@ const cors = require("cors");
 const app = express();
 const QuizRouter = require("./Router/index");
 const fileUpload = require("express-fileupload");
-
+require("dotenv").config();
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 
 const dbConnect = require("./dbConnect");
 dbConnect.connect();
