@@ -5,13 +5,26 @@ module.exports.addMainQuiz = async function addMainQuiz(req, res) {
   // console.log(response);
   const quizData = await new MainQuizModel({
     // user: req.body.response.user,
-    Quiz_Ques: req.body.response.Quiz_Ques,
-    Quiz_Ans: req.body.response.Quiz_Ans,
-    Options: req.body.response.Options,
-    Exam: req.body.response.Exam,
-    Year: req.body.response.Year,
+    // Quiz_Ques: req.body.response.Quiz_Ques,
+    Quiz_Ques: req.body.question,
+
+    // Quiz_Ans: req.body.response.Quiz_Ans,
+    Quiz_Ans: req.body.answerText,
+
+    // Options: req.body.response.Options,
+    Options: req.body.OptionT,
+
+    // Exam: req.body.response.Exam,
+    Exam: req.body.exam,
+
+    // Year: req.body.response.Year,
+    Year: req.body.year,
+
+    // Categery: req.body.categery,
     Categery: req.body.categery,
-    Solution: req.body.response.Solution,
+
+    // Solution: req.body.response.Solution,
+    Solution: req.body.solution,
   });
 
   await quizData
